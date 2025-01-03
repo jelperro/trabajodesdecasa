@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rankings - Trabajo desde casa</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <style>
+    html, body { height: 100%; }
+    body {
+      background: linear-gradient(135deg, #FF7F50, #FFA500);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      font-family: 'Roboto', sans-serif;
+    }
+    main { flex: 1 0 auto; }
+    .header {
+      background: #1a1a1a;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .nav-link {
+      color: white;
+      transition: color 0.3s;
+    }
+    .nav-link:hover { color: #FFA500; }
+    .product-card {
+      background: white;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    }
+    .rank-badge {
+      background: #FFA500;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+    }
+    .category-button {
+      background: #1a1a1a;
+      transition: background-color 0.3s;
+    }
+    .category-button:hover,
+    .category-button.active { background: #FFA500; }
+    .buy-button {
+      background: #FFA500;
+      transition: background-color 0.3s;
+    }
+    .buy-button:hover { background: #FF7F50; }
+    .social-link { transition: color 0.3s; }
+    .social-link:hover { color: #FFA500; }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="text-white text-2xl font-bold">Trabajo desde casa</div>
+      <nav class="hidden md:flex space-x-6">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="rankings.html" class="nav-link">Rankings</a>
+        <a href="reviews.html" class="nav-link">Reviews</a>
+        <a href="tips.html" class="nav-link">Tips</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+      </nav>
+      <button class="md:hidden text-white">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-8">
+
+    <div id="rankings-content" class="space-y-6">
+      <!-- Product card template -->
+      <div class="product-card rounded-lg p-6 relative">
+        <div class="rank-badge">#1</div>
+        <div class="md:flex gap-6">
+          <img src="/api/placeholder/300/300" alt="Product" class="w-full md:w-64 h-64 object-cover rounded-lg mb-4 md:mb-0">
+          <div class="flex-1">
+            <div class="flex justify-between items-start mb-2">
+              <h2 class="text-xl font-bold">[Product Name]</h2>
+              <div class="text-2xl font-bold text-orange-500">[Score]/10</div>
+            </div>
+            <div class="space-y-4">
+              <p class="text-gray-600">[Product Description]</p>
+              <div class="grid md:grid-cols-2 gap-4">
+                <div>
+                  <h3 class="font-bold mb-2">Pros</h3>
+                  <ul class="list-disc pl-4 text-gray-600">
+                    <li>[Pro 1]</li>
+                    <li>[Pro 2]</li>
+                    <li>[Pro 3]</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="font-bold mb-2">Cons</h3>
+                  <ul class="list-disc pl-4 text-gray-600">
+                    <li>[Con 1]</li>
+                    <li>[Con 2]</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <div class="text-lg font-bold">[Price Range]</div>
+                <button class="buy-button text-white px-6 py-2 rounded">View Deals</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0">
+          <h3 class="font-bold mb-2">Ponte en contacto con nosotros</h3>
+          <p>------------</p>
+        </div>
+        
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

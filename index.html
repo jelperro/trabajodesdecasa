@@ -1,82 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Work & Study Wellness</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio - Trabajo desde casa</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      background: linear-gradient(135deg, #FF7F50, #FFA500);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      font-family: 'Roboto', sans-serif;
+    }
+    
+    main {
+      flex: 1 0 auto;
+    }
+
+    .header {
+      background: #1a1a1a;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    
+    .nav-link {
+      color: white;
+      transition: color 0.3s;
+    }
+    
+    .nav-link:hover {
+      color: #FFA500;
+    }
+    
+    .article-card {
+      background: white;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .article-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    .read-more {
+      background: #FFA500;
+      transition: background-color 0.3s;
+    }
+    
+    .read-more:hover {
+      background: #FF7F50;
+    }
+    
+    .social-link {
+      transition: color 0.3s;
+    }
+    
+    .social-link:hover {
+      color: #FFA500;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Work & Study Wellness</div>
-            <ul class="nav-links">
-                <li><a href="#products">Products</a></li>
-                <li><a href="#tips">Tips</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header class="header">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="text-white text-2xl font-bold">Trabajo desde casa</div>
+      <nav class="hidden md:flex space-x-6">
+        <a href="index.html" class="nav-link">Inicio</a>
+        <a href="rankings.html" class="nav-link">Rankings</a>
+        <a href="reviews.html" class="nav-link">Reviews</a>
+        <a href="tips.html" class="nav-link">Tips</a>
+        <a href="contacto.html" class="nav-link">Contacto</a>
+      </nav>
+      <button class="md:hidden text-white">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+  </header> 
 
-    <section class="hero">
-        <h1>Optimize Your Home Workspace</h1>
-        <p>Discover products and advice to enhance your productivity and well-being while working or studying from home.</p>
-        <a href="#products" class="cta">Explore Products</a>
-    </section>
+  <main class="container mx-auto px-4 py-8">
 
-    <section id="products" class="products">
-        <h2>Featured Products</h2>
-        <div class="product-list">
-            <!-- Example product -->
-            <div class="product">
-                <img src="product1.jpg" alt="Ergonomic Chair">
-                <h3>Ergonomic Chair</h3>
-                <p>Support your posture with our best-selling ergonomic chair.</p>
-                <a href="#" class="btn">Learn More</a>
-            </div>
-            <!-- Add more products here -->
+    <h1 class="text-3xl font-bold text-white">Ultimos Articulos </h1>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <article class="article-card rounded-lg overflow-hidden">
+        <img src="/api/placeholder/400/300" alt="Product Image" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h2 class="text-xl font-bold mb-2">Best Standing Desks 2025</h2>
+          <p class="text-gray-600 mb-4">Comprehensive review of the top standing desks for your home office setup.</p>
+          <button class="read-more text-white px-4 py-2 rounded">Read More</button>
         </div>
-    </section>
+      </article>
 
-    <section id="tips" class="tips">
-        <h2>Productivity & Wellness Tips</h2>
-        <div class="tips-list">
-            <article class="tip">
-                <h3>Take Regular Breaks</h3>
-                <p>Short breaks can refresh your mind and increase your focus.</p>
-            </article>
-            <article class="tip">
-                <h3>Create a Dedicated Workspace</h3>
-                <p>Keep work and personal spaces separate for better mental clarity.</p>
-            </article>
-            <!-- Add more tips here -->
+      <article class="article-card rounded-lg overflow-hidden">
+        <img src="/api/placeholder/400/300" alt="Product Image" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h2 class="text-xl font-bold mb-2">Ergonomic Chair Guide</h2>
+          <p class="text-gray-600 mb-4">Find the perfect ergonomic chair for your work-from-home needs.</p>
+          <button class="read-more text-white px-4 py-2 rounded">Read More</button>
         </div>
-    </section>
+      </article>
 
-    <section id="about" class="about">
-        <h2>About Us</h2>
-        <p>We are committed to helping individuals enhance their home workspaces with quality products and actionable advice.</p>
-    </section>
+      <article class="article-card rounded-lg overflow-hidden">
+        <img src="/api/placeholder/400/300" alt="Product Image" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h2 class="text-xl font-bold mb-2">Monitor Arms Comparison</h2>
+          <p class="text-gray-600 mb-4">Top monitor arms for improving your desk setup and ergonomics.</p>
+          <button class="read-more text-white px-4 py-2 rounded">Read More</button>
+        </div>
+      </article>
+    </div>
+  </main>
 
-    <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <form action="#" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-
-            <button type="submit">Send</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Work & Study Wellness. All rights reserved.</p>
-    </footer>
+  <footer class="bg-gray-900 text-white py-8">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0">
+          <h3 class="font-bold mb-2">Ponte en contacto con nosotros</h3>
+          <p>------------</p>
+        </div>
+        
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
